@@ -1,0 +1,72 @@
+package TeleFon;
+
+public class Telefono {
+
+	private int prefijo;
+	private long numero;
+	private long numdesc;
+	private int duracionUltima, duracionAcum;
+	
+	
+	public Telefono () {} //EL PRIMER CONSTRUCTOR DEBE IR VACIO PARA QUE EN HIJO NO TE EXIJA PARAMETROS Y TE DE MAS LIBERTAD.
+
+
+
+	public Telefono(int prefijo, long numero) {
+		this.prefijo = prefijo;
+		this.numero = numero;
+	}
+
+
+	public Telefono(int duracionUltima, int duracionAcum) {
+		this.duracionUltima = duracionUltima;
+		this.duracionAcum = duracionAcum;
+	}
+
+	
+	
+	public int getDuracionUltima() {
+		return duracionUltima;
+	}
+
+	public void setDuracionUltima(int duracionUltima) {
+		this.duracionUltima = duracionUltima;
+		setDuracionAcum();
+	}
+	
+	public int getDuracionAcum() {
+		return duracionAcum;
+	}
+
+	public void setDuracionAcum() {
+		this.duracionAcum += getDuracionUltima();
+	}
+
+	public int getPrefijo() {
+		return prefijo;
+	}
+
+	public void setPrefijo(int prefijo) {
+		this.prefijo = prefijo;
+	}
+
+	public long getNumero() {
+		return numero;
+	}
+
+	public void setNumero(long numero) {
+		this.numero = numero;
+	}
+
+	public long getNumdesc() {
+		return numdesc;
+	}
+
+	public void setNumdesc(long numdesc) {
+		this.numdesc = numdesc;
+	}
+	
+	
+		
+	
+}

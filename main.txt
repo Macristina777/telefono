@@ -1,0 +1,40 @@
+package TeleFon;
+
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	Scanner leer = new Scanner (System.in);	// ESTA PORQ LA PERSONA NECESITA INGRESAR INFORMACION
+		int opcion;
+		
+		do {
+		System.out.println("ingrese opcion");
+		System.out.println("1 = Agregar contacto");
+		System.out.println("2 = Realizar llamada");
+		System.out.println("3 = Buscar numero");
+		System.out.println("4 = salir");
+		opcion=leer.nextInt();
+		
+		
+		switch (opcion) {
+		case 1:
+			Contacto.contacto.verAgregar();
+			break;
+		case 2:
+			Contacto.contacto.verLlamada();
+			break;
+		case 3:
+			Contacto.contacto.verBusqueda();
+			break;
+		case 4:
+			System.exit(0);
+			break;
+		}
+	
+		}while(opcion!=4); // GRACIIAS AL DO WHILE SE REPITE EL CICLO
+		System.out.println("see you");
+		System.out.println("Tiene que volver a iniciar el programa ");
+		
+	}
+
+}
